@@ -1,0 +1,79 @@
+{
+  "name": "@eliware/cli-template",
+  "type": "module",
+  "version": "1.1.0",
+  "description": "A Node.js CLI template with explicit commands, help, version, and safe execution boundaries.",
+  "main": "cli-template.mjs",
+  "bin": {
+    "eliware-cli-template": "cli-template.mjs"
+  },
+  "scripts": {
+    "start": "node cli-template.mjs",
+    "test": "npx --node-options=\"--experimental-vm-modules --no-warnings\" jest --detectOpenHandles --silent --coverage",
+    "test:gaps": "npm test 2>&1 | grep '|' | grep -vF '|     100 |      100 |     100 |     100 |'",
+    "lint": "npx oxlint .",
+    "pack": "npm pack --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliware/cli-template.git"
+  },
+  "keywords": [
+    "cli-template",
+    "cli",
+    "nodejs",
+    "starter",
+    "template"
+  ],
+  "author": "Eli Sterling, eliware.org <eli@eliware.org>",
+  "license": "MIT",
+  "eliware": {
+    "apply": [
+      "general",
+      "application",
+      "cli"
+    ],
+    "authority": {
+      "authoritativeFor": [
+        "CLI template command structure and starter workflow."
+      ],
+      "notAuthoritativeFor": [
+        "Shared Eliware policy, operations, and publication authorization."
+      ]
+    },
+    "crosslinks": [
+      {
+        "path": "eliware/conventions",
+        "relationship": "relatedAuthority",
+        "authoritativeFor": "Applicable repository conventions."
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/eliware/cli-template/issues"
+  },
+  "homepage": "https://github.com/eliware/cli-template#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)",
+      "**/?(*.)+(spec|test).mjs"
+    ]
+  },
+  "dependencies": {
+    "@eliware/common": "^1.1.7",
+    "dotenv": "^17.4.2"
+  },
+  "files": [
+    "cli-template.mjs",
+    "examples",
+    "src",
+    "cli-template.service",
+    ".env.example",
+    "README.md",
+    "LICENSE"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": "8.0",
+  "repositoryId": "eliware/cli-template",
+  "description": "Repository-local authority record for the Eliware CLI template.",
+  "subjects": [
+    {
+      "id": "cli-template.implementation",
+      "kind": "repository-implementation",
+      "authority": { "path": "../" },
+      "directives": [{ "path": "./directives.json", "ids": ["E-1"] }],
+      "implementation": [
+        { "path": "../cli-template.mjs", "role": "CLI-entrypoint" }
+      ],
+      "consumers": ["Projects derived from cli-template"],
+      "reviewers": ["Eliware maintainers"],
+      "evidence": [],
+      "notAuthoritativeFor": [
+        "Eliware policy",
+        "operations",
+        "publication authorization"
+      ],
+      "status": "active"
+    }
+  ]
+}
