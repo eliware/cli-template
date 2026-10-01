@@ -1,15 +1,9 @@
 # Documentation
 
-This directory contains end-user documentation for projects derived from
-`@eliware/cli-template`. The root [README](../README.md) is the primary
-starter guide.
+[Project README](../README.md) · [Specifications](../specs/README.md) · [Release notes](../RELEASE_NOTES.md)
 
-## Contents
+Purpose: explain the public use and support boundaries of the Eliware CLI template. Scope: user-facing instructions for installing and running the starter CLI. Setup: follow the [project README](../README.md). Usage: see its Commands and Exit codes sections. Validation: run `npm test` in a checkout. Support: use the community link in the project README.
 
-- [Root README](../README.md)
-- [Examples](../examples/README.md)
+- [Project README](../README.md)
+- [Specifications](../specs/README.md)
 - [Release notes](../RELEASE_NOTES.md)
-
-## Validation
-
-Keep links current and add each new end-user document to this index.
