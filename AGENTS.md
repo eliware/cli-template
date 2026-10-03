@@ -14,6 +14,8 @@ Required structure: `bin/eliware-cli-template.mjs` is the executable entrypoint.
 
 ## Development
 
+Before changing files, read the root README.md, applicable AGENTS.md instructions, applicable documentation, and applicable specifications.
+
 These development instructions apply repository-wide; nearer AGENTS.md files provide instructions within each subdirectory.
 
 Use Node.js 26, npm, and native ESM `.mjs` modules. Read README.md, applicable specifications, implementation, and tests before changing behavior. Every source and test module must have a single responsibility: one cohesive purpose and one reason to change. Business-logic modules and coordinators are valid, including coordinators of coordinators, when each module does only its own responsibility. When a change introduces a distinct responsibility, create a focused submodule with a mirrored test and wire it through its owner; do not add the new responsibility to an existing module. During ordinary review, refactor them when you find mixed responsibilities. Passing the 100-line source and 200-line test maxima does not prove a module is cohesive or permit mixed responsibilities. The maxima are blocking; passing them does not prove a module has one responsibility.
@@ -38,8 +40,10 @@ The executable entrypoint is `bin/eliware-cli-template.mjs`; implementation is u
 
 ## CLI
 
-The executable command is `eliware-cli-template`; it validates command-line arguments and defaults to help when no arguments are supplied. `--help` and `--version` exit successfully; invalid arguments return exit code 2. Test argument validation for supported and unsupported input. The starter has no state-changing commands, so destructive actions and dry-run controls do not apply. It is a short-lived process with no shutdown resources. Keep output free of credentials and document supported platforms separately from CI-tested platforms.
+Supported platforms: Windows, macOS, and Linux. Validation evidence: Ubuntu is directly validated by GitHub Actions CI; Windows and macOS compatibility is inferred from platform-neutral Node.js APIs, not directly tested here.
+
+The executable command is eliware-cli-template, implemented by bin/eliware-cli-template.mjs. It parses --help and --version, defaults to help with no arguments, and validates unsupported arguments with exit code 2; help and version return 0. No command changes state, so dry-run controls do not apply. Validation evidence: Ubuntu is directly validated in GitHub Actions CI. Windows and macOS compatibility is inferred from platform-neutral Node.js APIs; neither is directly tested here.
 
 ## npm publication
 
-The public package is `@eliware/cli-template`; `package.json.version` is its release version source. The exact `package.json.files` allowlist is `bin/`, `src/`, `docs/`, `specs/`, `README.md`, `AGENTS.md`, `LICENSE`, and `RELEASE_NOTES.md`. The exact pack validation command is `eliware-test --pack`; `npm run pack` runs it. Require the pack stage to pass before publication. The workflow uses npm Trusted Publishing with provenance and verifies the exact package version in the registry. Publication requires explicit authorization through the Operations release handoff; these instructions do not authorize publishing.
+Package identity: @eliware/cli-template. Version source: package.json.version. The exact package.json.files allowlist is src/, docs/, README.md, AGENTS.md, LICENSE, RELEASE_NOTES.md, bin/. Pack validation command: eliware-test --pack (also npm run pack). Pack validation result: require pass before release. npm provenance mechanism: npm Trusted Publishing with provenance. Exact-version public npm registry verification: verify the exact package.json version for @eliware/cli-template at registry.npmjs.org. Release approval and execution ownership: Eli and the project developer run TagIt preflight; Eli decides readiness and instructs DevOps; DevOps executes the authorized release. Release authorization and handoff: publication requires explicit authorization through the Operations release handoff; this section grants no permission.

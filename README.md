@@ -1,6 +1,6 @@
 # [![eliware.org](https://eliware.org/logos/brand.png)](https://discord.gg/M6aTR9eTwN)
 
-## @eliware/cli-template [![npm](https://img.shields.io/npm/v/@eliware/cli-template)](https://www.npmjs.com/package/@eliware/cli-template) [![License](https://img.shields.io/github/license/eliware/cli-template)](https://github.com/eliware/cli-template/blob/main/LICENSE) [![CI](https://github.com/eliware/cli-template/actions/workflows/ci.yml/badge.svg)](https://github.com/eliware/cli-template/actions/workflows/ci.yml)
+## @eliware/cli-template [![npm](https://img.shields.io/npm/v/@eliware/cli-template)](https://www.npmjs.com/package/@eliware/cli-template) [![License](https://img.shields.io/github/license/eliware/cli-template)](https://github.com/eliware/cli-template/blob/main/LICENSE) [![CI](https://github.com/eliware/cli-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/eliware/cli-template/actions/workflows/ci.yaml)
 
 ## Table of Contents
 
@@ -69,6 +69,10 @@ The CLI has no runtime configuration; its options are command-line arguments. It
 The starter only prints help, version, or an invalid-argument error. Each invocation starts, handles its arguments, then exits; there is no service or resource that needs shutdown. These are its operational boundaries: it does not open connections, modify files, or change external state. Its supported operational workflow is local command execution; publication requires a separate authorized release handoff.
 
 ## Commands
+
+Supported platforms: Windows, macOS, and Linux. Validation evidence: Ubuntu is directly validated by GitHub Actions CI; Windows and macOS compatibility is inferred from platform-neutral Node.js APIs, not directly tested here.
+
+Validation evidence: GitHub Actions CI directly validates Ubuntu. Windows and macOS are intended platforms by inference because the implementation uses platform-neutral Node.js APIs; neither is directly tested by this repository.
 
 | Command                          | Behavior                              |
 | -------------------------------- | ------------------------------------- |

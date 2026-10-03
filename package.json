@@ -1,7 +1,7 @@
 {
   "name": "@eliware/cli-template",
   "type": "module",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "description": "A Node.js CLI template with explicit commands, help, version, and safe execution boundaries.",
   "main": "bin/eliware-cli-template.mjs",
   "bin": {
@@ -77,14 +77,13 @@
     "@eliware/common": "^2.0.0"
   },
   "files": [
-    "bin/",
     "src/",
     "docs/",
-    "specs/",
     "README.md",
     "AGENTS.md",
     "LICENSE",
-    "RELEASE_NOTES.md"
+    "RELEASE_NOTES.md",
+    "bin/"
   ],
   "prettier": {
     "printWidth": 100,
