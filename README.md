@@ -1,6 +1,6 @@
 # [![eliware.org](https://eliware.org/logos/brand.png)](https://discord.gg/M6aTR9eTwN)
 
-## @eliware/cli-template [![npm version](https://img.shields.io/npm/v/@eliware/cli-template.svg)](https://www.npmjs.com/package/@eliware/cli-template) [![license](https://img.shields.io/github/license/eliware/cli-template.svg)](LICENSE) [![CI](https://github.com/eliware/cli-template/actions/workflows/ci.yml/badge.svg)](https://github.com/eliware/cli-template/actions/workflows/ci.yml)
+## @eliware/cli-template [![npm](https://img.shields.io/npm/v/@eliware/cli-template)](https://www.npmjs.com/package/@eliware/cli-template) [![License](https://img.shields.io/github/license/eliware/cli-template)](https://github.com/eliware/cli-template/blob/main/LICENSE) [![CI](https://github.com/eliware/cli-template/actions/workflows/ci.yml/badge.svg)](https://github.com/eliware/cli-template/actions/workflows/ci.yml)
 
 ## Table of Contents
 
@@ -22,9 +22,11 @@
 
 ## Features
 
-Purpose: provide a reusable Node.js command-line application baseline for Eliware projects.
+This template owns a reusable CLI baseline; each derived CLI owns its commands, arguments, exit behavior, and destructive-action safeguards.
 
-Package description: A Node.js CLI template with explicit commands, help, version, and safe execution boundaries. Author: Eli Sterling, eliware.org <eli@eliware.org>. License: MIT.
+Package description: A Node.js CLI template with explicit commands, help, version, and safe execution boundaries. Author: Eliware <eliware@eliware.org>. License: MIT.
+
+Purpose: provide a reusable Node.js command-line application baseline for Eliware projects.
 
 The starter implements help, version, and invalid-argument handling. Replace the template identity and command behavior when creating a derived CLI.
 
@@ -43,6 +45,8 @@ Run `npx @eliware/cli-template --help` after the package is available from npm. 
 ## Development
 
 Read [AGENTS.md](AGENTS.md), this README, [specs/README.md](specs/README.md), and [RELEASE_NOTES.md](RELEASE_NOTES.md) before changing the template. `bin/eliware-cli-template.mjs` is the executable entrypoint; `src/cli.mjs` owns argument behavior and is mirrored by `tests/cli.test.mjs`.
+
+Documentation: [docs](docs/README.md) · [specifications](specs/README.md)
 
 ## Testing
 
@@ -97,12 +101,14 @@ For help or discussion, join the Eliware community:
 
 ## Links
 
-- Documentation: [docs](docs/README.md) · [specifications](specs/README.md)
-- [Canonical repository profile specifications](https://github.com/eliware/test/blob/main/specs/conventions/README.md)
-- [Home Page](https://eliware.org)
-- [GitHub Repo](https://github.com/eliware/cli-template) (`git+https://github.com/eliware/cli-template.git`)
-- [npm Package](https://www.npmjs.com/package/@eliware/cli-template)
-- [GitHub Org](https://github.com/eliware)
-- [Eli Sterling on GitHub](https://github.com/eli-sterling)
+- [docs](docs/README.md)
+- [Home Page](https://github.com/eliware/cli-template#readme)
+- [GitHub repository](https://github.com/eliware/cli-template.git)
+- [Eliware](https://eliware.org)
+- [GitHub organization](https://github.com/eliware)
 - [Discord](https://discord.gg/M6aTR9eTwN)
+- [Documentation](https://github.com/eliware/docs/blob/main/repo-map.yaml)
+- [specifications](specs/README.md)
 - [Release Notes](RELEASE_NOTES.md)
+
+- [npm Package](https://www.npmjs.com/package/@eliware/cli-template)

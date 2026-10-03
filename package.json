@@ -1,7 +1,7 @@
 {
   "name": "@eliware/cli-template",
   "type": "module",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "A Node.js CLI template with explicit commands, help, version, and safe execution boundaries.",
   "main": "bin/eliware-cli-template.mjs",
   "bin": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eliware/cli-template"
+    "url": "git+https://github.com/eliware/cli-template.git"
   },
   "keywords": [
     "cli-template",
@@ -26,7 +26,7 @@
     "starter",
     "template"
   ],
-  "author": "Eli Sterling, eliware.org <eli@eliware.org>",
+  "author": "Eliware <eliware@eliware.org>",
   "license": "MIT",
   "private": false,
   "engines": {
@@ -49,7 +49,7 @@
   },
   "homepage": "https://github.com/eliware/cli-template#readme",
   "devDependencies": {
-    "@eliware/test": "^8.0.0"
+    "@eliware/test": "^10.0.0"
   },
   "jest": {
     "testEnvironment": "node",
@@ -65,10 +65,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "statements": 100,
         "branches": 100,
         "functions": 100,
-        "lines": 100
+        "lines": 100,
+        "statements": 100
       }
     }
   },
