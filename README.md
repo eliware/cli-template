@@ -114,5 +114,4 @@ For help or discussion, join the Eliware community:
 - [Documentation](https://github.com/eliware/docs/blob/main/repo-map.yaml)
 - [specifications](specs/README.md)
 - [Release Notes](RELEASE_NOTES.md)
-
 - [npm Package](https://www.npmjs.com/package/@eliware/cli-template)
