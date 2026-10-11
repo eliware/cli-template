@@ -1,7 +1,7 @@
-version: "11.0"
+version: "12.0"
 description: Repository-specific guidance for the Eliware CLI template.
 directives:
-  - id: E-1010
+  - id: E-1010.0
     dos:
       - Provide a reusable Node.js CLI with help, version, argument validation, mirrored tests, npm publication configuration, and documented behavior.
       - Replace the template identity, commands, and package metadata when creating a derived CLI.

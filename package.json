@@ -1,12 +1,34 @@
 {
   "name": "@eliware/cli-template",
+  "version": "12.0.0",
   "type": "module",
-  "version": "11.0.0",
   "description": "A Node.js CLI template with explicit commands, help, version, and safe execution boundaries.",
+  "keywords": [
+    "cli-template",
+    "cli",
+    "nodejs",
+    "starter",
+    "template"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "main": "bin/eliware-cli-template.mjs",
   "bin": {
     "eliware-cli-template": "bin/eliware-cli-template.mjs"
   },
+  "files": [
+    "src/",
+    "docs/",
+    "README.md",
+    "AGENTS.md",
+    "LICENSE",
+    "RELEASE_NOTES.md",
+    "bin/",
+    "specs/"
+  ],
   "scripts": {
     "test": "eliware-test",
     "lint": "eliware-test --lint",
@@ -15,40 +37,12 @@
     "format:check": "eliware-test --format-check",
     "pack": "eliware-test --pack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eliware/cli-template.git"
-  },
-  "keywords": [
-    "cli-template",
-    "cli",
-    "nodejs",
-    "starter",
-    "template"
-  ],
-  "author": "Eliware <eliware@eliware.org>",
-  "license": "MIT",
-  "private": false,
   "engines": {
-    "node": "26"
+    "node": ">=26"
   },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
+  "dependencies": {
+    "@eliware/common": "^2.0.0"
   },
-  "eliware": {
-    "id": "E-1010",
-    "apply": [
-      "general",
-      "application",
-      "cli",
-      "npm-published"
-    ]
-  },
-  "bugs": {
-    "url": "https://github.com/eliware/cli-template/issues"
-  },
-  "homepage": "https://github.com/eliware/cli-template#readme",
   "devDependencies": {
     "@eliware/test": "^11.0.0"
   },
@@ -73,18 +67,6 @@
       }
     }
   },
-  "dependencies": {
-    "@eliware/common": "^2.0.0"
-  },
-  "files": [
-    "src/",
-    "docs/",
-    "README.md",
-    "AGENTS.md",
-    "LICENSE",
-    "RELEASE_NOTES.md",
-    "bin/"
-  ],
   "prettier": {
     "printWidth": 100,
     "tabWidth": 2,
@@ -99,5 +81,24 @@
     "arrowParens": "always",
     "proseWrap": "preserve",
     "endOfLine": "lf"
+  },
+  "author": "Eliware <eliware@eliware.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliware/cli-template.git"
+  },
+  "homepage": "https://github.com/eliware/cli-template#readme",
+  "bugs": {
+    "url": "https://github.com/eliware/cli-template/issues"
+  },
+  "eliware": {
+    "id": "E-1010",
+    "apply": [
+      "general",
+      "application",
+      "cli",
+      "npm-published"
+    ]
   }
 }

@@ -1,6 +1,8 @@
 # [![eliware.org](https://eliware.org/logos/brand.png)](https://discord.gg/M6aTR9eTwN)
 
-@eliware/cli-template [![npm](https://img.shields.io/npm/v/@eliware/cli-template)](https://www.npmjs.com/package/@eliware/cli-template) [![License](https://img.shields.io/github/license/eliware/cli-template)](https://github.com/eliware/cli-template/blob/main/LICENSE) [![CI](https://github.com/eliware/cli-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/eliware/cli-template/actions/workflows/ci.yaml)
+## @eliware/cli-template [![npm](https://img.shields.io/npm/v/@eliware/cli-template)](https://www.npmjs.com/package/@eliware/cli-template) [![License](https://img.shields.io/github/license/eliware/cli-template)](https://github.com/eliware/cli-template/blob/main/LICENSE) [![CI](https://github.com/eliware/cli-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/eliware/cli-template/actions/workflows/ci.yaml)
+
+A Node.js CLI template with explicit commands, help, version, and safe execution boundaries.
 
 ## Table of Contents
 
@@ -17,14 +19,12 @@
 - [Commands](#commands)
 - [Exit codes](#exit-codes)
 - [Support](#support)
-- [License](#license)
 - [Links](#links)
+- [License](#license)
 
 ## Features
 
 This template owns a reusable CLI baseline; each derived CLI owns its commands, arguments, exit behavior, and destructive-action safeguards.
-
-Package description: A Node.js CLI template with explicit commands, help, version, and safe execution boundaries. Author: Eliware <eliware@eliware.org>. License: MIT.
 
 Purpose: provide a reusable Node.js command-line application baseline for Eliware projects.
 
@@ -32,7 +32,7 @@ The starter implements help, version, and invalid-argument handling. Replace the
 
 ## Requirements
 
-Use Node.js 26 and npm. CI currently tests Ubuntu; Windows and macOS are intended but unverified.
+Use Node.js 26 or later and npm. CI currently tests Ubuntu; Windows and macOS are intended but unverified.
 
 ## Setup
 
@@ -41,6 +41,8 @@ Clone or create a repository from this template, then run `npm ci`. Replace the 
 ## Usage
 
 Run `npx @eliware/cli-template --help` after the package is available from npm. The executable is `eliware-cli-template`. `package.json.version` is the release version source; releases use matching `vMAJOR.MINOR.PATCH` Git tags. Do not treat the npm badge or install command as proof that an unreleased version is available.
+
+Read [RELEASE_NOTES.md](RELEASE_NOTES.md) for release history.
 
 ## Development
 
@@ -54,7 +56,7 @@ Run `npm test` for Jest with 100% statement, branch, function, and line coverage
 
 ## Troubleshooting
 
-If the command does not run, check that Node.js 26 is installed and that dependencies are installed with `npm ci`. Unknown arguments return exit code 2. Run `npm test` to validate the checkout.
+If the command does not run, check that Node.js 26 or later is installed and that dependencies are installed with `npm ci`. Unknown arguments return exit code 2. Run `npm test` to validate the checkout.
 
 ## Security
 
@@ -93,24 +95,21 @@ Output contains only usage, the package version, or the supplied unsupported arg
 
 ## Support
 
-For help or discussion, join the Eliware community:
+For help, questions, or to chat with the author and community, visit:
 
-[![Discord](https://eliware.org/logos/discord_96.png)](https://discord.gg/M6aTR9eTwN)
+[![Discord](https://eliware.org/logos/discord_96.png)](https://discord.gg/M6aTR9eTwN)[![eliware.org](https://eliware.org/logos/eliware_96.png)](https://discord.gg/M6aTR9eTwN)
 
 **[eliware.org on Discord](https://discord.gg/M6aTR9eTwN)**
 
-## License
-
-[license](LICENSE)
-
 ## Links
 
-- [docs](docs/README.md)
-- [Home Page](https://github.com/eliware/cli-template#readme)
-- [GitHub repository](https://github.com/eliware/cli-template.git)
-- [Eliware](https://eliware.org)
-- [GitHub organization](https://github.com/eliware)
+- [Home Page](https://eliware.org)
+- [GitHub Org](https://github.com/eliware)
+- [GitHub Repo](https://github.com/eliware/cli-template)
+- [Bug Reports](https://github.com/eliware/cli-template/issues)
+- [npm](https://www.npmjs.com/package/@eliware/cli-template)
 - [Discord](https://discord.gg/M6aTR9eTwN)
-- [specifications](specs/README.md)
-- [Release Notes](RELEASE_NOTES.md)
-- [npm Package](https://www.npmjs.com/package/@eliware/cli-template)
+
+## License
+
+[MIT © Eliware](LICENSE)
