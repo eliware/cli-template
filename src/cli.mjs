@@ -1,7 +1,7 @@
 import { log as defaultLog } from "@eliware/common";
 
 export function runCli(args, { version, log = defaultLog, write = console.log }) {
-  if (args.length === 0 || args[0] === "--help") {
+  if (args.length === 0 || (args.length === 1 && args[0] === "--help")) {
     write("Usage: eliware-cli-template [--help] [--version]");
     return 0;
   }
