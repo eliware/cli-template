@@ -14,7 +14,11 @@ Use this guide to create and use a command-line application from this template.
 
 Install Node.js 26 or later and npm 12 or later. Run `npm ci` in the repository root.
 
-The package installs the `eliware-cli-template` command. Run `eliware-cli-template --help` to show help. Run `eliware-cli-template --version` to show the package version. Run the command with no arguments to show help.
+> **Template setup — update this callout after you create a CLI repository.**
+>
+> This template has no published npm version. Set package distribution to public npm, a private registry, or no publication. Add the approved consumer install command: `[ADD INSTALL COMMAND]`. State where users run the command: `[ADD INSTALL LOCATION]`.
+
+After installation, the package provides the `eliware-cli-template` command. Run `eliware-cli-template --help` to show help. Run `eliware-cli-template --version` to show the package version. Run the command with no arguments to show help.
 
 The starter accepts no other arguments. An unsupported argument prints an error and returns exit code 2. Successful help and version commands return exit code 0.
 
@@ -26,7 +30,7 @@ Add commands only when the derived product needs them. Document their arguments,
 
 ## Release
 
-The package publishes to npm with provenance after validation. The package version must match the `vMAJOR.MINOR.PATCH` Git tag. Do not treat a badge or package file as proof that a version is available.
+The template includes an npm publication workflow. Set the publication target and authorization for the derived CLI before release. Match the package version with the `vMAJOR.MINOR.PATCH` Git tag. Do not treat a badge or package file as proof that a version is available.
 
 ## Validate
 
