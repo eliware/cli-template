@@ -60,6 +60,8 @@ Use only approved secret stores for secret values.
 
 ## Configuration
 
+The starter has no runtime settings. It does not read environment variables or configuration files.
+
 ## Operations
 
 The starter prints help, a version, or an error. It does not change files or connect to a network.
