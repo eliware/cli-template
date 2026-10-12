@@ -24,74 +24,59 @@ A Node.js CLI template with explicit commands, help, version, and safe execution
 
 ## Features
 
-This template owns a reusable CLI baseline; each derived CLI owns its commands, arguments, exit behavior, and destructive-action safeguards.
-
-Purpose: provide a reusable Node.js command-line application baseline for Eliware projects.
-
-The starter implements help, version, and invalid-argument handling. Replace the template identity and command behavior when creating a derived CLI.
+This template provides a reusable starting point. Each derived repository owns its product behavior and operating decisions.
 
 ## Requirements
 
-Use Node.js 26 or later and npm. CI currently tests Ubuntu; Windows and macOS are intended but unverified.
+Use Node.js 26 or later and npm 12 or later for repository validation.
 
 ## Setup
 
-Clone or create a repository from this template, then run `npm ci`. Replace the package name, description, repository URLs, keywords, commands, and behavior before releasing a derived project.
+Create a repository from this template. Replace the template name, description, URLs, keywords, and sample content.
+Run `npm ci` from the repository root.
 
 ## Usage
 
-Run `npx @eliware/cli-template --help` after the package is available from npm. The executable is `eliware-cli-template`. `package.json.version` is the release version source; releases use matching `vMAJOR.MINOR.PATCH` Git tags. Do not treat the npm badge or install command as proof that an unreleased version is available.
-
-Read [RELEASE_NOTES.md](RELEASE_NOTES.md) for release history.
+Follow this README and the [user guide](docs/README.md). Read [release notes](RELEASE_NOTES.md) for release history.
 
 ## Development
 
-Read [AGENTS.md](AGENTS.md), this README, [specs/README.md](specs/README.md), and [RELEASE_NOTES.md](RELEASE_NOTES.md) before changing the template. `bin/eliware-cli-template.mjs` is the executable entrypoint; `src/cli.mjs` owns argument behavior and is mirrored by `tests/cli.test.mjs`.
-
-Documentation: [docs](docs/README.md) · [specifications](specs/README.md)
+Read [AGENTS.md](AGENTS.md) and [the specifications index](specs/README.md) before you change files.
+Keep documents and records in the repository that owns them.
+Read [release notes](RELEASE_NOTES.md) for release history.
 
 ## Testing
 
-Run `npm test` for Jest with 100% statement, branch, function, and line coverage, lint, format-check, audit, package validation, and applicable profile checks through `eliware-test`. Run `npm run format:check` for read-only formatting validation. CI runs `npm ci` followed by `npm test`.
+Run `npm test` before handoff. It runs the repository checks through `eliware-test`.
 
 ## Troubleshooting
 
-If the command does not run, check that Node.js 26 or later is installed and that dependencies are installed with `npm ci`. Unknown arguments return exit code 2. Run `npm test` to validate the checkout.
+Install the required Node.js and npm versions. Run `npm ci` after dependency changes.
+Review the file and rule in any validation error.
 
 ## Security
 
-The starter has no commands that change state and no runtime secrets or configuration. Keep credentials, tokens, private keys, and machine-specific values out of version control and CLI output.
+Keep credentials, secrets, private data, and runtime state out of Git.
+Use only approved secret stores for secret values.
 
 ## Configuration
 
-The CLI has no runtime configuration; its options are command-line arguments. Its operational boundaries exclude persistent state, network connections, and external operations. `package.json` and `.knit/deploy.yaml` are metadata, not runtime configuration.
-
 ## Operations
 
-The starter only prints help, version, or an invalid-argument error. Each invocation starts, handles its arguments, then exits; there is no service or resource that needs shutdown. These are its operational boundaries: it does not open connections, modify files, or change external state. Its supported operational workflow is local command execution; publication requires a separate authorized release handoff.
+The starter prints help, a version, or an error. It does not change files or connect to a network.
+Use the authorized release process to publish the package.
 
 ## Commands
 
-Supported platforms: Windows, macOS, and Linux. Validation evidence: Ubuntu is directly validated by GitHub Actions CI; Windows and macOS compatibility is inferred from platform-neutral Node.js APIs, not directly tested here.
-
-Validation evidence: GitHub Actions CI directly validates Ubuntu. Windows and macOS are intended platforms by inference because the implementation uses platform-neutral Node.js APIs; neither is directly tested by this repository.
-
-| Command                          | Behavior                              |
-| -------------------------------- | ------------------------------------- |
-| `eliware-cli-template --help`    | Print usage and exit 0.               |
-| `eliware-cli-template --version` | Print the package version and exit 0. |
-| `eliware-cli-template`           | Print usage and exit 0.               |
-
-Examples: `eliware-cli-template --help` and `eliware-cli-template --version`. No command changes or deletes state, so no destructive-action control is needed. Keep this section complete when adding commands.
+Run `eliware-cli-template --help` to print usage. Run `eliware-cli-template --version` to print the package version. Run the command with no arguments to print usage.
+The starter accepts no other arguments. An unsupported argument returns exit code 2. The starter does not change state.
 
 ## Exit codes
 
-| Code | Meaning                                        |
-| ---- | ---------------------------------------------- |
-| `0`  | Help, version, or no-argument usage completed. |
-| `2`  | An unsupported argument was supplied.          |
-
-Output contains only usage, the package version, or the supplied unsupported argument; do not include secrets or sensitive payloads. CI tests Ubuntu. Windows and macOS are intended platforms but have not been validated by this repository.
+| Code | Meaning                                       |
+| ---- | --------------------------------------------- |
+| `0`  | Help, version, or usage completed.            |
+| `2`  | The command received an unsupported argument. |
 
 ## Support
 
