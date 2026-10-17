@@ -1,16 +1,17 @@
 import { log as defaultLog } from "@eliware/common";
+import { parseArguments } from "./arguments.mjs";
 
 export function runCli(args, { version, log = defaultLog, write = console.log }) {
-  if (args.length === 0 || (args.length === 1 && args[0] === "--help")) {
+  const parsed = parseArguments(args);
+  if (parsed.type === "help") {
     write("Usage: eliware-cli-template [--help] [--version]");
     return 0;
   }
-
-  if (args.length === 1 && args[0] === "--version") {
+  if (parsed.type === "version") {
     write(version);
     return 0;
   }
 
-  log.error(`Unknown argument: ${args[0]}`);
+  log.error(`Unknown argument: ${parsed.argument}`);
   return 2;
 }
