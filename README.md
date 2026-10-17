@@ -24,7 +24,7 @@ A Node.js CLI template with explicit commands, help, version, and safe execution
 
 ## Features
 
-This template provides a reusable starting point. Each derived repository owns its product behavior and operating decisions.
+This template starts Node.js command-line applications. Each derived application owns its behavior and operating decisions.
 
 ## Requirements
 
@@ -51,7 +51,7 @@ Run `npm test` before handoff. It runs the repository checks through `eliware-te
 ## Troubleshooting
 
 Install the required Node.js and npm versions. Run `npm ci` after dependency changes.
-Review the file and rule in any validation error.
+For each validation error, examine the named file and rule.
 
 ## Security
 
@@ -65,7 +65,7 @@ The starter has no runtime settings. It does not read environment variables or c
 ## Operations
 
 The starter prints help, a version, or an error. It does not change files or connect to a network.
-Use the authorized release process to publish the package.
+Use the approved release process to publish the package.
 
 ## Commands
 

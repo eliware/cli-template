@@ -25,6 +25,7 @@ Use native ESM for maintained JavaScript modules.
 Run `npm test` for aggregate validation.
 Run `npm run lint` for lint checks.
 Run `npm run audit` for dependency checks.
+
 Run `npm run format` to format files.
 Run `npm run format:check` to check formatting.
 
@@ -34,12 +35,19 @@ Keep credentials, secret values, private data, and runtime state out of Git.
 
 ## Changes
 
-Keep changes within this repository scope.
+Keep changes in this repository.
 Use Eliware Operations for approval before external changes.
 
 ## Application
 
 Document entrypoints, workflows, settings, startup, and shutdown in README.md.
+
+Run focused tests first during development.
+Pass one or more test paths to `npm test` for focused testing.
+Run one test file with `npm test -- tests/path/to/example.test.mjs`.
+Run multiple test files with `npm test -- tests/path/to/first.test.mjs tests/path/to/second.test.mjs`.
+Prevent repeated full-suite runs during development.
+Run the full `npm test` suite for final validation before a commit, milestone, or release.
 
 ## CLI
 

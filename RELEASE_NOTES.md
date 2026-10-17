@@ -1,5 +1,14 @@
 # Release Notes
 
+## 13.0.0 — 2026-10-17
+
+### Changed
+
+- Align repository guidance, CLI documentation, and specifications with v13 conventions.
+- Add focused test guidance for development and final validation.
+- Use the canonical npm publication workflow and the required Knit deployment commands.
+- Validate CI with full Git history for tag-based release checks.
+
 ## 12.0.0 — 2026-10-12
 
 ### Changed

@@ -1,6 +1,6 @@
 {
   "name": "@eliware/cli-template",
-  "version": "12.0.0",
+  "version": "13.0.0",
   "type": "module",
   "description": "A Node.js CLI template with explicit commands, help, version, and safe execution boundaries.",
   "keywords": [
