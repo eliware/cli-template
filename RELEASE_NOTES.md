@@ -8,6 +8,7 @@
 - Add focused test guidance for development and final validation.
 - Use the canonical npm publication workflow and the required Knit deployment commands.
 - Validate CI with full Git history for tag-based release checks.
+- Give argument parsing, help text, and error reporting their own modules and tests.
 
 ## 12.0.0 — 2026-10-12
 
