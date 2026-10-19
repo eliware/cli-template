@@ -2,6 +2,8 @@
 
 Use this guide to create and use a command-line application from this template.
 
+> After you create a repository from this template, replace this document with end-user documentation for your repository.
+
 ## Create a CLI
 
 1. Create a repository from this template.
