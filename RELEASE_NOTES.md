@@ -1,14 +1,17 @@
 # Release Notes
 
-## 13.0.0 — 2026-10-17
+## 13.0.0 — 2026-10-19
 
 ### Changed
 
-- Align repository guidance, CLI documentation, and specifications with v13 conventions.
-- Add focused test guidance for development and final validation.
-- Use the canonical npm publication workflow and the required Knit deployment commands.
-- Validate CI with full Git history for tag-based release checks.
-- Give argument parsing, help text, and error reporting their own modules and tests.
+- Align package metadata, repository guidance, CLI documentation, and specifications with v13 conventions.
+- Mark the documentation for replacement after scaffolding.
+- Update npm dependencies and the package lockfile for v13 validation.
+- Replace the legacy publication workflow with the canonical npm workflow and tag checks.
+- Update CI to use checkout v7 and fetch full Git history for release checks.
+- Align GitHub and Knit workflows with the shared deployment commands.
+- Move argument parsing, help text, and error reporting into focused modules with dedicated tests.
+- Add focused test commands for development and final validation.
 
 ## 12.0.0 — 2026-10-12
 
