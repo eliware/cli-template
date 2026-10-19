@@ -2,32 +2,28 @@
 
 ## Project
 
-This repository is `eliware/cli-template`.
-
-It starts Node.js command-line applications.
+See README.md for repository purpose, ownership, and scope.
 
 ## Scope and boundaries
 
-Use README.md for repository purpose, scope, and ownership.
+Keep requirements in their authoritative specifications.
 
 ## Layout
 
-Use README.md and specs/README.md to find repository files.
+Use README.md and specs/README.md to find maintained files.
 
 ## Development
 
-Keep each source and test module focused on one responsibility.
+Give each source and test module one cohesive purpose.
 
 ## Validation
 
-Use Node.js 26 or later and npm 12 or later.
-Use native ESM for maintained JavaScript modules.
-Run `npm test` for aggregate validation.
-Run `npm run lint` for lint checks.
-Run `npm run audit` for dependency checks.
-
-Run `npm run format` to format files.
-Run `npm run format:check` to check formatting.
+Use Node.js 26 or later and native ESM for maintained JavaScript modules.
+Run npm test for aggregate validation.
+Run npm run lint for lint checks.
+Run npm run audit for dependency checks.
+Run npm run format to format files.
+Run npm run format:check to check formatting.
 
 ## Security
 
@@ -35,15 +31,9 @@ Keep credentials, secret values, private data, and runtime state out of Git.
 
 ## Changes
 
-Keep changes in this repository.
-Use Eliware Operations for approval before external changes.
-
 ## Application
 
-Document entrypoints, workflows, settings, startup, and shutdown in README.md.
-
 Run focused tests first during development.
-Pass one or more test paths to `npm test` for focused testing.
 Run one test file with `npm test -- tests/path/to/example.test.mjs`.
 Run multiple test files with `npm test -- tests/path/to/first.test.mjs tests/path/to/second.test.mjs`.
 Prevent repeated full-suite runs during development.
@@ -51,9 +41,4 @@ Run the full `npm test` suite for final validation before a commit, milestone, o
 
 ## CLI
 
-Document commands, options, arguments, defaults, errors, and exit codes in README.md.
-
 ## npm publication
-
-Include specs/ in the package.
-Document install, entrypoints, contents, and release limits in README.md.
