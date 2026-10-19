@@ -27,7 +27,8 @@
     "LICENSE",
     "RELEASE_NOTES.md",
     "bin/",
-    "specs/"
+    "specs/",
+    "package.json"
   ],
   "scripts": {
     "test": "eliware-test",
