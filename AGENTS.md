@@ -31,6 +31,9 @@ Keep credentials, secret values, private data, and runtime state out of Git.
 
 ## Changes
 
+Keep each source and test module focused on one responsibility.
+Update RELEASE_NOTES.md for each user-visible change.
+
 ## Application
 
 Run focused tests first during development.
@@ -41,4 +44,10 @@ Run the full `npm test` suite for final validation before a commit, milestone, o
 
 ## CLI
 
+Keep `--help` and `--version` read-only.
+Document each command, argument, default, error, and exit code.
+
 ## npm publication
+
+Use `.github/workflows/npm.yaml` for package publication.
+Follow the approved release process before you publish.

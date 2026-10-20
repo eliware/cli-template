@@ -50,6 +50,9 @@ Run `npm test` before handoff. It runs the repository checks through `eliware-te
 
 ## Troubleshooting
 
+If the command returns exit code 2, remove unsupported arguments.
+Run `node bin/eliware-cli-template.mjs --help` from the repository root for supported arguments.
+
 ## Security
 
 Keep credentials, secrets, private data, and runtime state out of Git.

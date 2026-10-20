@@ -1,12 +1,14 @@
 # Release Notes
 
-## 13.0.0 — 2026-10-19
+## 14.0.0 — 2026-10-20
 
 ### Changed
 
-- Align package metadata, repository guidance, CLI documentation, and specifications with v13 conventions.
+- Align package metadata, repository guidance, CLI documentation, and specifications with v14 conventions.
+- Update `@eliware/common` to version 13.0.0 and refresh its dependencies.
+- Complete the CLI troubleshooting guidance and required contributor instructions.
 - Mark the documentation for replacement after scaffolding.
-- Update npm dependencies and the package lockfile for v13 validation.
+- Update npm dependencies and the package lockfile for the validation workflow.
 - Replace the legacy publication workflow with the canonical npm workflow and tag checks.
 - Update CI to use checkout v7 and fetch full Git history for release checks.
 - Align GitHub and Knit workflows with the shared deployment commands.
