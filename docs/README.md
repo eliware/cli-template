@@ -18,7 +18,11 @@ Install Node.js 26 or later and npm 12 or later. Run `npm ci` in the repository 
 
 > **Template setup — update this callout after you create a CLI repository.**
 >
-> This template has no published npm version. Set the package target to public npm, a private registry, or no publication. Add the approved consumer install command: `[ADD INSTALL COMMAND]`. State where users run the command: `[ADD INSTALL LOCATION]`.
+> This template has no published npm version. Set the target to public npm, a private registry, or no publication.
+> If you publish to npm, replace `@scope/package-name` with your package name and run `npm install @scope/package-name`.
+> If you use a private registry, add its setup and authentication steps.
+> If you do not publish the package, tell users how they can install or run the CLI from its source.
+> Replace `[ADD INSTALL LOCATION]` with the supported location.
 
 After installation, the package provides the `eliware-cli-template` command. Run `eliware-cli-template --help` to show help. Run `eliware-cli-template --version` to show the package version. Run the command with no arguments to show help.
 
