@@ -5,10 +5,13 @@
 ### Changed
 
 - Align package metadata, repository guidance, CLI documentation, and specifications with Eliware Test v15.
-- Update @eliware/common and @eliware/test to version 15 and refresh all dependencies.
+- Upgrade @eliware/test to version 15 and refresh its dependencies.
+- Remove @eliware/common because maintained code does not import it.
 - Split CLI argument parsing, help output, and error reporting into focused modules with dedicated tests.
+- Write unsupported argument errors through the CLI output and return exit code 2.
 - Update the CLI guide with template setup callouts, command behavior, release limits, and validation steps.
 - Mark the guide for replacement with end-user documentation after scaffolding.
+- Add an npm install command placeholder and instructions for private or unpublished packages.
 - Replace the legacy publish workflow with the canonical npm workflow and verify release tags against package versions.
 - Update CI to use checkout v7 and fetch full Git history for release checks.
 - Align GitHub and Knit workflows with shared deployment commands.
