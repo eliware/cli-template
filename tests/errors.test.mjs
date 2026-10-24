@@ -1,10 +1,10 @@
 import { expect, jest, test } from "@jest/globals";
 import { reportUnknownArgument } from "../src/errors.mjs";
 
-test("logs the unsupported argument", () => {
-  const log = { error: jest.fn() };
+test("writes the unsupported argument", () => {
+  const write = jest.fn();
 
-  reportUnknownArgument("--unknown", log);
+  reportUnknownArgument("--unknown", write);
 
-  expect(log.error).toHaveBeenCalledWith("Unknown argument: --unknown");
+  expect(write).toHaveBeenCalledWith("Unknown argument: --unknown");
 });

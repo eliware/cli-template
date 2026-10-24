@@ -1,3 +1,3 @@
-export function reportUnknownArgument(argument, log) {
-  log.error(`Unknown argument: ${argument}`);
+export function reportUnknownArgument(argument, write) {
+  write(`Unknown argument: ${argument}`);
 }

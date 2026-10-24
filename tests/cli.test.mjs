@@ -14,13 +14,22 @@ test("prints the supplied package version", () => {
 });
 
 test("reports an unknown argument and returns the usage error code", () => {
-  const log = { error: jest.fn() };
-  expect(runCli(["--unknown"], { version: "9.0.0", log, write: jest.fn() })).toBe(2);
-  expect(log.error).toHaveBeenCalledWith("Unknown argument: --unknown");
+  const write = jest.fn();
+  expect(runCli(["--unknown"], { version: "9.0.0", write })).toBe(2);
+  expect(write).toHaveBeenCalledWith("Unknown argument: --unknown");
+});
+
+test("writes an unknown argument through the default output", () => {
+  const write = jest.spyOn(console, "log").mockImplementation(() => {});
+
+  expect(runCli(["--unknown"], { version: "9.0.0" })).toBe(2);
+  expect(write).toHaveBeenCalledWith("Unknown argument: --unknown");
+
+  write.mockRestore();
 });
 
 test("rejects extra arguments after a supported option", () => {
-  const log = { error: jest.fn() };
-  expect(runCli(["--version", "extra"], { version: "9.0.0", log })).toBe(2);
-  expect(log.error).toHaveBeenCalledWith("Unknown argument: --version");
+  const write = jest.fn();
+  expect(runCli(["--version", "extra"], { version: "9.0.0", write })).toBe(2);
+  expect(write).toHaveBeenCalledWith("Unknown argument: --version");
 });
