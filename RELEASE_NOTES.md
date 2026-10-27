@@ -1,5 +1,12 @@
 # Release Notes
 
+## 15.0.1 — 2026-10-26
+
+### Changed
+
+- Update the package version to 15.0.1.
+- Upgrade @eliware/test to version 15.0.1 and refresh its dependencies.
+
 ## 15.0.0 — 2026-10-24
 
 ### Changed

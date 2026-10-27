@@ -1,6 +1,6 @@
 {
   "name": "@eliware/cli-template",
-  "version": "15.0.0",
+  "version": "15.0.1",
   "type": "module",
   "description": "A Node.js CLI template with explicit commands, help, version, and safe execution boundaries.",
   "keywords": [
@@ -42,7 +42,7 @@
     "node": ">=26"
   },
   "devDependencies": {
-    "@eliware/test": "^15.0.0"
+    "@eliware/test": "^15.0.1"
   },
   "jest": {
     "testEnvironment": "node",
